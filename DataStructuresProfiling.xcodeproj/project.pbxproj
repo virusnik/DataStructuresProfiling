@@ -12,11 +12,14 @@
 		365D1D0E248294200057D33B /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365D1D0D248294200057D33B /* ShareViewController.swift */; };
 		365D1D11248294200057D33B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 365D1D0F248294200057D33B /* MainInterface.storyboard */; };
 		365D1D15248294200057D33B /* ShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 365D1D0B248294200057D33B /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		366DD61A248CEEAE0024C764 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DD619248CEEAE0024C764 /* FeedViewModel.swift */; };
 		367500DF246467C4007349AF /* SuffixSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367500DE246467C4007349AF /* SuffixSequence.swift */; };
 		367500E124646DFC007349AF /* SuffixSequenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367500E024646DFC007349AF /* SuffixSequenceViewController.swift */; };
 		367500E4246473FA007349AF /* SuffixArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367500E3246473FA007349AF /* SuffixArrayManipulator.swift */; };
 		367500E624647672007349AF /* SwiftSuffixArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367500E524647672007349AF /* SwiftSuffixArrayManipulator.swift */; };
 		3686CB782482D1B300C78676 /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3686CB772482D1B300C78676 /* Matches.swift */; };
+		36BA432F24880AD9001E574A /* RunTestHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BA432E24880AD9001E574A /* RunTestHeaderView.swift */; };
+		36BA4331248810B9001E574A /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BA4330248810B9001E574A /* BaseView.swift */; };
 		F719AE0022C54873009D08D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F719ADFF22C54873009D08D3 /* AppDelegate.swift */; };
 		F719AE0722C54877009D08D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F719AE0622C54877009D08D3 /* Assets.xcassets */; };
 		F719AE2022C548CA009D08D3 /* ArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F719AE1622C548C9009D08D3 /* ArrayManipulator.swift */; };
@@ -74,11 +77,14 @@
 		365D1D0D248294200057D33B /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		365D1D10248294200057D33B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		365D1D12248294200057D33B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		366DD619248CEEAE0024C764 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		367500DE246467C4007349AF /* SuffixSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixSequence.swift; sourceTree = "<group>"; };
 		367500E024646DFC007349AF /* SuffixSequenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixSequenceViewController.swift; sourceTree = "<group>"; };
 		367500E3246473FA007349AF /* SuffixArrayManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArrayManipulator.swift; sourceTree = "<group>"; };
 		367500E524647672007349AF /* SwiftSuffixArrayManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSuffixArrayManipulator.swift; sourceTree = "<group>"; };
 		3686CB772482D1B300C78676 /* Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
+		36BA432E24880AD9001E574A /* RunTestHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTestHeaderView.swift; sourceTree = "<group>"; };
+		36BA4330248810B9001E574A /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		F719ADFC22C54873009D08D3 /* DataStructuresProfiling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStructuresProfiling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F719ADFF22C54873009D08D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F719AE0622C54877009D08D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,6 +141,14 @@
 			path = ShareExtension;
 			sourceTree = "<group>";
 		};
+		366DD618248CED200024C764 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				366DD619248CEEAE0024C764 /* FeedViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		367500E2246473DD007349AF /* SuffixArray */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +199,7 @@
 		F719AE1222C548A8009D08D3 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				366DD618248CED200024C764 /* ViewModels */,
 				F719AE2B22C5490B009D08D3 /* Controllers */,
 				F719AE2822C5490B009D08D3 /* Models */,
 				F719AE3022C5490B009D08D3 /* Views */,
@@ -267,6 +282,8 @@
 				F719AE3D22C5490B009D08D3 /* DataStructures.storyboard */,
 				F719AE3522C5490B009D08D3 /* Feed.storyboard */,
 				F719AE3722C5490B009D08D3 /* DataStructures */,
+				36BA432E24880AD9001E574A /* RunTestHeaderView.swift */,
+				36BA4330248810B9001E574A /* BaseView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -413,7 +430,9 @@
 				F719AE4722C5490B009D08D3 /* SetViewController.swift in Sources */,
 				F719AE3E22C5490B009D08D3 /* FeedDataProvider.swift in Sources */,
 				F719AE4522C5490B009D08D3 /* ArrayViewController.swift in Sources */,
+				366DD61A248CEEAE0024C764 /* FeedViewModel.swift in Sources */,
 				F719AE2322C548CA009D08D3 /* SwiftDictionaryManipulator.swift in Sources */,
+				36BA432F24880AD9001E574A /* RunTestHeaderView.swift in Sources */,
 				F719AE4622C5490B009D08D3 /* DictionaryViewController.swift in Sources */,
 				F719AE2522C548CA009D08D3 /* SwiftSetManipulator.swift in Sources */,
 				367500E624647672007349AF /* SwiftSuffixArrayManipulator.swift in Sources */,
@@ -432,6 +451,7 @@
 				F719AE4022C5490B009D08D3 /* FeedThirdViewController.swift in Sources */,
 				F719AE0022C54873009D08D3 /* AppDelegate.swift in Sources */,
 				367500E124646DFC007349AF /* SuffixSequenceViewController.swift in Sources */,
+				36BA4331248810B9001E574A /* BaseView.swift in Sources */,
 				F719AE4E22C54945009D08D3 /* AlgoProvider.swift in Sources */,
 				367500E4246473FA007349AF /* SuffixArrayManipulator.swift in Sources */,
 			);

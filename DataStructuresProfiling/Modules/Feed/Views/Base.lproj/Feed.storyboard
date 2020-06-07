@@ -21,29 +21,39 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FeedTableViewCell" id="dze-vX-CsG" customClass="FeedTableViewCell" customModule="DataStructuresProfiling" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="45.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dze-vX-CsG" id="8Pi-MU-0yV">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43F-Tg-CxN">
-                                                    <rect key="frame" x="16" y="11" width="382" height="22.5"/>
+                                                    <rect key="frame" x="16" y="11" width="48" height="22.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kw-DJ-edw">
+                                                    <rect key="frame" x="352" y="12" width="42" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="43F-Tg-CxN" firstAttribute="leading" secondItem="8Pi-MU-0yV" secondAttribute="leading" constant="16" id="9ub-3Y-pQ1"/>
-                                                <constraint firstItem="43F-Tg-CxN" firstAttribute="centerY" secondItem="8Pi-MU-0yV" secondAttribute="centerY" id="IHT-na-q8b"/>
-                                                <constraint firstAttribute="bottom" secondItem="43F-Tg-CxN" secondAttribute="bottom" constant="11" id="UR7-Ub-npq"/>
-                                                <constraint firstItem="43F-Tg-CxN" firstAttribute="top" secondItem="8Pi-MU-0yV" secondAttribute="top" constant="11" id="qOW-gZ-dRn"/>
-                                                <constraint firstAttribute="trailing" secondItem="43F-Tg-CxN" secondAttribute="trailing" constant="16" id="yEZ-FH-qeG"/>
+                                                <constraint firstItem="1Kw-DJ-edw" firstAttribute="baseline" secondItem="43F-Tg-CxN" secondAttribute="baseline" id="2bp-w1-RQS"/>
+                                                <constraint firstItem="43F-Tg-CxN" firstAttribute="leading" secondItem="8Pi-MU-0yV" secondAttribute="leading" constant="16" id="3a1-oC-EXn"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="43F-Tg-CxN" secondAttribute="trailing" constant="16" id="3oe-xl-J8f"/>
+                                                <constraint firstItem="1Kw-DJ-edw" firstAttribute="top" secondItem="8Pi-MU-0yV" secondAttribute="topMargin" constant="1" id="DUz-H1-db3"/>
+                                                <constraint firstItem="1Kw-DJ-edw" firstAttribute="firstBaseline" secondItem="43F-Tg-CxN" secondAttribute="firstBaseline" id="JuZ-Io-prS"/>
+                                                <constraint firstItem="1Kw-DJ-edw" firstAttribute="centerY" secondItem="8Pi-MU-0yV" secondAttribute="centerY" id="gem-zd-iiE"/>
+                                                <constraint firstItem="1Kw-DJ-edw" firstAttribute="trailing" secondItem="8Pi-MU-0yV" secondAttribute="trailingMargin" id="phk-ne-CnE"/>
+                                                <constraint firstItem="1Kw-DJ-edw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8Pi-MU-0yV" secondAttribute="leading" constant="20" symbolic="YES" id="qU5-MH-FJW"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameLabel" destination="43F-Tg-CxN" id="H5Z-vx-pN0"/>
+                                            <outlet property="valueLabel" destination="1Kw-DJ-edw" id="ULs-Yq-6ba"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

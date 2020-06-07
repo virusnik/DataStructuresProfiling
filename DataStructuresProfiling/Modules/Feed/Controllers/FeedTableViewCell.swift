@@ -13,8 +13,11 @@ class FeedTableViewCell: UITableViewCell {
     static let reuseID = String(describing: FeedTableViewCell.self)
     
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var valueLabel: UILabel!
     
-    func updateCell(name: String) {
-        nameLabel.text = name
+    func updateCell(feedData: FeedData) {
+        nameLabel.text = feedData.name.rawValue
+        valueLabel.text = (feedData.time < 0) ? "" : Services.timeNumberFormatter.string(from: feedData.time as NSNumber)
+        valueLabel.textColor = feedData.color
     }
 }

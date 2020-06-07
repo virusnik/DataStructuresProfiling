@@ -10,12 +10,20 @@ import UIKit
 
 class FeedViewController: UIViewController {
     
-    private let feedData = Services.feedProvider.feedMockData()
-    
     @IBOutlet weak var feedTableView: UITableView!
+    
+    private lazy var viewModel: FeedViewModel = {
+       FeedViewModel()
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.testsCompletion = { [weak self] in
+            DispatchQueue.main.async {
+                self?.feedTableView.reloadData()
+            }
+        }
     }
 }
 
@@ -24,16 +32,27 @@ extension FeedViewController: UITableViewDataSource {
     // MARK: - Table View Data Source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return feedData.count
+        return viewModel.numberOfRowsInSection()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = feedTableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.reuseID, for: indexPath) as? FeedTableViewCell
         guard let feedCell = cell else { return UITableViewCell() }
+        guard let item = viewModel.getItemFromIndex(indexPath) else { return UITableViewCell() }
         
-        feedCell.updateCell(name: feedData[indexPath.row].name)
+        feedCell.updateCell(feedData: item)
         return feedCell
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let vw = RunTestHeaderView()
+        vw.delegate = self
+        return vw
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat { return 40 }
+    
+    
 }
 
 extension FeedViewController: UITableViewDelegate {
@@ -69,5 +88,11 @@ extension FeedViewController: UITableViewDelegate {
         if let pushViewController = vc {
             self.navigationController?.pushViewController(pushViewController, animated: true)
         }
+    }
+}
+
+extension FeedViewController: RunTestHeaderDelegate {
+    func runTests(numberOfTests: Int, completion: @escaping () -> Void) {
+        viewModel.runTests(numberOfTests)
     }
 }

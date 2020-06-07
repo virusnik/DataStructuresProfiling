@@ -8,7 +8,24 @@
 
 import Foundation
 
-class JobScheduler{
-    private let queue = JobQueue<Any>.self
+class JobScheduler {
+    
+    var jobs: [JobQueue] = []
+    var completion: (([JobQueue]) -> Void)?
+    
+    func runJobs() {
+        let group = DispatchGroup()
+        let queue = DispatchQueue(label: "test.scheduler", qos: .userInitiated)
+        
+        for job in jobs {
+            group.enter()
+            queue.async {
+                job.execute()
+                group.leave()
+            }
+            group.wait()
+        }
+        completion?(jobs)
+    }
     
 }

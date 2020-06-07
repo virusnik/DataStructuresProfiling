@@ -17,4 +17,13 @@ class Services {
     static var algoProvider: AlgoProvider = {
         return AlgoProvider()
     }()
+    
+    static var timeNumberFormatter: NumberFormatter = {
+        var formatter = NumberFormatter()
+        formatter.numberStyle = NumberFormatter.Style.decimal
+        let digits = 6
+        formatter.minimumFractionDigits = digits
+        formatter.maximumFractionDigits = digits
+        return formatter
+    }()
 }

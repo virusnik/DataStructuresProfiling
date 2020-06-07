@@ -7,7 +7,17 @@
 //
 
 import Foundation
+import UIKit
 
 struct FeedData {
-    let name: String
+    let name: CollectionType
+    var time: TimeInterval
+    var color: UIColor
 }
+
+enum CollectionType: String {
+    case array = "Array"
+    case dictionary = "Dictionary"
+    case set = "Set"
+}
+

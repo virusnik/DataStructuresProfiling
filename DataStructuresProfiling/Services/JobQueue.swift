@@ -8,14 +8,15 @@
 
 import Foundation
 
-struct JobQueue<Value> {
-    let queue: DispatchQueue = .main
-    let closure: () -> Value
-
-    func perform(then handler: @escaping (Value) -> Void) {
-        queue.async {
-            let value = self.closure()
-            handler(value)
-        }
+class JobQueue {
+    
+    var task: (() -> TimeInterval)?
+    
+    var executionTime: TimeInterval = 0
+    
+    func execute() {
+        guard let task = task else { return }
+        let time = task()
+        executionTime = time
     }
 }
