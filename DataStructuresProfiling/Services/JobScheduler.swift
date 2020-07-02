@@ -15,7 +15,8 @@ class JobScheduler {
     
     func runJobs() {
         let group = DispatchGroup()
-        let queue = DispatchQueue(label: "test.scheduler", qos: .userInitiated)
+//        let queue = DispatchQueue(label: "test.scheduler", qos: .userInitiated)
+        let queue = DispatchQueue(label: "test.scheduler.concurrent", qos: .userInitiated, attributes: .concurrent)
         
         for job in jobs {
             group.enter()
